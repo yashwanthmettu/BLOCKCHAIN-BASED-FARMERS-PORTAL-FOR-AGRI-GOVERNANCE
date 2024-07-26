@@ -1,0 +1,75 @@
+{%extends 'admins/adminbase.html'%}
+{%load static%}
+{%block contents%}
+
+<section class="ftco-section ftco-cart">
+			<div class="container">
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+    				<div class="cart-list">
+
+						
+	    				
+
+						  <h1><font color="BLACK">Subsidy transactions</font></h1>
+
+						  <table class="table">
+						    <thead class="table-bordered">
+						      <tr class="text-center">
+						        <th>S.No&nbsp;</th>
+						        <th>C_index</th>						        
+						        <th>C_Sender</th>
+                                <!--<th>C_Reciever</th>-->				        
+                                <th>C_Amount</th>
+                                
+                                <th>C_Recipient</th>
+                                <th>C_timestamp</th>
+                                <th>C_Proof</th>
+                                <th>C_Currenthash</th>
+						        
+
+
+						      </tr>
+						    </thead>
+						    <tbody >
+                             
+						
+                            {% for i in data %}   
+                            <tr class="text-center" >
+								 
+                        <td>{{forloop.counter}}</td>
+                    
+                        <td>1</td>
+                        <td> Admin </td> 
+                       <!--<td>{{i.name}}</td>-->                
+                        <td>10,000</td>
+                        <td>Central Bank</td>                 
+                        <td>{{i.c_timestamp}} </td>
+                        <td>{{i.c_proof}} </td>
+                        <td>{{i.c_previous_hash}} </td>  
+                        </tr>  
+                                   
+					
+                        {% endfor %}   
+
+                        
+					
+                      
+                    
+                 
+                </tr>
+                  
+						    </tbody>
+						  </table>
+
+
+
+                          
+					  </div>
+
+
+    			</div>
+    		</div>
+			</div>
+		</section>
+{%endblock%}

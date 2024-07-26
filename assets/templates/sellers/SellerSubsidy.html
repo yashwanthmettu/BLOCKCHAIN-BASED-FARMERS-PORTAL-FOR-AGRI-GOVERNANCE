@@ -1,0 +1,49 @@
+{%extends 'sellers/sellerbase.html'%}
+{%load static%}
+{%block contents%}
+
+<section class="ftco-section ftco-cart">
+			<div class="container">
+				<div class="row">
+    			<div class="col-md-12 ftco-animate">
+                    <h2>Subsidy of <span class="btn btn-info"> {{request.session.loginid}}</span></h2>
+    				<div class="cart-list">
+	    				<table class="table">
+						    <thead class="thead-primary">
+						      <tr class="text-center">
+						        <th>S.No</th>
+						        <th>Amount</th>
+                                <th>Description</th>
+
+						      </tr>
+						    </thead>
+						    <tbody>
+                             
+						{% if i.name != i.loginid %}
+						<td>1</td>
+                        <td>-</td>
+						<td>Subsidy Not Granted</td>
+						{% else %}
+						<td>1</td>
+                        <td class="quantity">&#x20B9;10,000</td>
+						<td>The admin has granted you the mentioned subsidy amount for successfully registering into our portal. We wish you all the best for the sales you are going to make in future!</td>
+						
+                       
+                            {% endif %}
+
+                        
+                        
+                    
+
+                    </tr>
+                  
+						    </tbody>
+						  </table>
+					  </div>
+
+
+    			</div>
+    		</div>
+			</div>
+		</section>
+{%endblock%}
